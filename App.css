@@ -18,7 +18,7 @@ body{
     position: fixed;
     background: #FFF;
     height: 80vh;
-    width: 420px;
+    width: 520px;
     max-width: 710px;
     overflow: hidden;
     border-radius: 15px;
@@ -84,6 +84,7 @@ li {
     padding: 12px 16px;
     border-radius: 10px 10px 0 10px;
     max-width: 75%;
+    max-height: 300px;
     color: #fff;
     font-size: 0.95rem;
 }
@@ -111,6 +112,7 @@ textarea{
 }
 .chatInput span{
     align-self: flex-end;
+    height: 300px;
     color: #ccc;
     cursor: pointer;
     height: 55px;
