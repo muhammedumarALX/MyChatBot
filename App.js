@@ -1,7 +1,7 @@
 const userInput = document.getElementById("user-input")
 const sendButton = document.getElementById("send")
 const chatDisplay = document.querySelector('.chatDisplay ul')
-const API_KEY = "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";
+const API_KEY = "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";
 
 const handleInput = () => {
     const message = userInput.value.trim();
@@ -11,14 +11,14 @@ const handleInput = () => {
         const userMessageItem = document.createElement('li');
         userMessageItem.className = "outgoing";
         userMessageItem.innerHTML = `
-            <p class="userMessage">${message}</p>
+            <p class="userMessage"></p>
             <span class="userIcon material-symbols-rounded">Face</span>
         `;
 
+        userMessageItem.querySelector('p').textContent = message;
         chatDisplay.appendChild(userMessageItem);
 
         userInput.value = "";
-        
     }
 }
 
@@ -40,7 +40,17 @@ const generateResponse = (userMessage) => {
     fetch(API_URL, requestOptions)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        const botMessage = data.choices[0].message.content;
+            console.log(botMessage)
+        const botMessageItem = document.createElement('li')
+        botMessageItem.className ="incoming";
+        botMessageItem.innerHTML = `
+        <span class="botIcon material-symbols-rounded">smart_toy</span>
+        <p class="botMessage"></p>
+        `;
+
+        botMessageItem.querySelector('p').textContent = botMessage;
+        chatDisplay.appendChild(botMessageItem)
     })
     .catch(error => {
         console.log(error)
