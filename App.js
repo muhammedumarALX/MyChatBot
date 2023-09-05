@@ -1,7 +1,7 @@
 const userInput = document.getElementById("user-input")
 const sendButton = document.getElementById("send")
 const chatDisplay = document.querySelector('.chatDisplay ul')
-const API_KEY = "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";
+const API_KEY = "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";
 
 
 const handleInput = () => {
