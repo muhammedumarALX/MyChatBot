@@ -1,7 +1,8 @@
 const userInput = document.getElementById("user-input")
 const sendButton = document.getElementById("send")
 const chatDisplay = document.querySelector('.chatDisplay ul')
-const API_KEY = "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";
+const API_KEY = "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";
+
 
 const handleInput = () => {
     const message = userInput.value.trim();
@@ -20,6 +21,7 @@ const handleInput = () => {
 
         userInput.value = "";
     }
+
 }
 
 const generateResponse = (userMessage) => {
@@ -61,6 +63,6 @@ sendButton.addEventListener("click", handleInput)
 userInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800){
         e.preventDefault();
-        handleChat();
+        handleInput();
     }
 })
