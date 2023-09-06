@@ -1,7 +1,7 @@
 const userInput = document.getElementById("user-input")
 const sendButton = document.getElementById("send")
 const chatDisplay = document.querySelector('.chatDisplay ul')
-const API_KEY = "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";
+const API_KEY = "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";
 
 
 const handleInput = () => {
@@ -55,7 +55,7 @@ const generateResponse = (userMessage) => {
         chatDisplay.appendChild(botMessageItem)
     })
     .catch(error => {
-        console.log(error)
+        console.log(error.message)
     })
 }
 
