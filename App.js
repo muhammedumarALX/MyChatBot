@@ -1,12 +1,7 @@
 const userInput = document.getElementById("user-input")
 const sendButton = document.getElementById("send")
 const chatDisplay = document.querySelector('.chatDisplay ul')
-<<<<<<< HEAD
-const API_KEY = "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";
-=======
-const API_KEY = "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";
->>>>>>> 6de625b48365adf58ba319d08031108c16bce3b5
-
+const API_KEY = "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";
 
 const handleInput = () => {
     const message = userInput.value.trim();
@@ -59,7 +54,18 @@ const generateResponse = (userMessage) => {
         chatDisplay.appendChild(botMessageItem)
     })
     .catch(error => {
-        console.log(error.message)
+
+        const failed = error.message;
+        console.log(failed)
+        const failedMessage = document.createElement("li")
+        failedMessage.className = "incoming";
+        failedMessage.innerHTML = `
+        <span class="errBotIcon material-symbols-rounded">smart_toy</span>
+        <p class="errMessage">Oops!!!</p>
+        `;
+
+        failedMessage.querySelector('p').textContent = "Oops!!! An error occurred: " + failed
+        chatDisplay.appendChild(failedMessage)
     })
 }
 

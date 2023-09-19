@@ -84,6 +84,24 @@ li {
     background: #fff;
 }
 
+.errBotIcon{
+    padding: 10px;
+    color:  rgb(223, 7, 7);
+    width: 40px;
+    align-self: flex-end;
+}
+
+.errMessage{
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 12px 16px;
+    border-radius: 10px 10px 10px 0;
+    max-width: 75%;
+    color: #fff;
+    font-size: 0.95rem;
+    background:  rgb(223, 7, 7);
+}
+
 .botMessage{
     white-space: pre-wrap;
     word-wrap: break-word;
